@@ -78,7 +78,6 @@ response success:
 | `email` | `string` | **Required**. your email |
 | `name` | `string` | **Required**. your name |
 | `password` | `string` | **Required**. your password |
-| `Bearer Token`(Authentication) | `string` | **Required**. jwt token from login  |
 
 ex.
 ```http
