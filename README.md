@@ -48,6 +48,7 @@ Start the server
 | :-------- | :------- | :------------------------- |
 | `email` | `string` | **Required**. your email |
 | `password` | `string` | **Required**. your password |
+
 ex.
 ```http
 {
@@ -78,6 +79,7 @@ response success:
 | `name` | `string` | **Required**. your name |
 | `password` | `string` | **Required**. your password |
 | `Bearer Token`(Authentication) | `string` | **Required**. jwt token from login  |
+
 ex.
 ```http
 {
@@ -115,6 +117,7 @@ response success:
 | `description` | `string` | **Required**. destination description |
 | `img` | `string` | **Required**. image link |
 | `Bearer Token`(Authentication) | `string` | **Required**. jwt token from login  |
+
 ex.
 ```http
 {
@@ -199,6 +202,7 @@ ex.
 ```
 
 response success:
+```http
 {
     "message": "Success update",
     "data": {
@@ -210,6 +214,7 @@ response success:
     },
     "success": true
 }
+```
 
 
 #### Delete Destination
@@ -240,6 +245,7 @@ response success:
 | `id` (params) | `string` | **Required** destination id|
 
 response success:
+```http
 {
     "data": {
         "_id": "653b2f72c03b2d003cdb499d",
@@ -250,6 +256,7 @@ response success:
     },
     "success": true
 }
+```
 
 
 #### Get Destination By Title
@@ -263,6 +270,7 @@ response success:
 | :-------- | :------- | :------------------------- |
 | `title` | `string` | **Required** destination title|
 | `Bearer Token`(Authorization) | `string` | **Required**. jwt token from login  |
+
 ex.
 ```http
 {
