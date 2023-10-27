@@ -1,5 +1,7 @@
 const userModel = require("../models/userModel");
 const md5 = require("md5");
+var validator = require("email-validator");
+
 
 const jsonwebtoken = require("jsonwebtoken");
 
@@ -61,6 +63,13 @@ exports.Register = async (request, response) => {
           .status(400)
           .json({ message: `${key} must be filled in`, success: false });
       }
+    }
+    const validationEmail = validator.validate(data.email);
+    if (!validationEmail) {
+      return response.status(400).json({
+        message: "email is not valid",
+        success: false,
+      });
     }
     const nameLowerCase = data.name.toLowerCase();
     const emailLowerCase = data.email.toLowerCase();
